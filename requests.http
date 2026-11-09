@@ -1,0 +1,105 @@
+### ===== PRODUCTOS =====
+POST http://localhost:8080/api/v1/productos
+Content-Type: application/json
+
+{
+  "nombre": "Cilindro 11 kg",
+  "categoria": "Cilindro",
+  "capacidad": "11 kg",
+  "precio": 15990,
+  "stock": 60,
+  "descripcion": "El formato más usado en hogares de la zona."
+}
+
+###
+GET http://localhost:8080/api/v1/productos
+
+###
+GET http://localhost:8080/api/v1/productos/1
+
+###
+PUT http://localhost:8080/api/v1/productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Cilindro 11 kg",
+  "categoria": "Cilindro",
+  "capacidad": "11 kg",
+  "precio": 16990,
+  "stock": 55,
+  "descripcion": "Precio actualizado."
+}
+
+###
+DELETE http://localhost:8080/api/v1/productos/1
+
+### ===== CLIENTES =====
+POST http://localhost:8080/api/v1/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "correo": "juan@gmail.com",
+  "telefono": "+56912345678",
+  "comuna": "Chillán",
+  "direccion": "Av. Libertad 450",
+  "tipoCliente": "Hogar"
+}
+
+###
+GET http://localhost:8080/api/v1/clientes
+
+###
+GET http://localhost:8080/api/v1/clientes/1
+
+###
+PUT http://localhost:8080/api/v1/clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "correo": "juan@gmail.com",
+  "telefono": "+56987654321",
+  "comuna": "San Carlos",
+  "direccion": "Av. Ecuador 450",
+  "tipoCliente": "Comercio"
+}
+
+###
+DELETE http://localhost:8080/api/v1/clientes/1
+
+### ===== VENTAS =====
+POST http://localhost:8080/api/v1/ventas
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "productoId": 1,
+  "cantidad": 2,
+  "total": 31980,
+  "metodoPago": "Efectivo"
+}
+
+###
+GET http://localhost:8080/api/v1/ventas
+
+###
+GET http://localhost:8080/api/v1/ventas/1
+
+###
+PUT http://localhost:8080/api/v1/ventas/1
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "productoId": 1,
+  "cantidad": 3,
+  "total": 47970,
+  "metodoPago": "Webpay",
+  "estado": "En camino"
+}
+
+###
+DELETE http://localhost:8080/api/v1/ventas/1
